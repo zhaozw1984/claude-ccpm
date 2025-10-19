@@ -1,0 +1,58 @@
+# Todo List Application - Git Ignore Rules
+# This file specifies intentionally untracked files to ignore
+
+# Dependencies
+node_modules/
+bower_components/
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+
+# Development files
+*.log
+*.tmp
+*.temp
+.env
+.env.local
+.env.development
+.env.production
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.cache
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Backup files
+*.bak
+*.backup
+
+# Package manager lock files (optional - depends on project needs)
+# package-lock.json
+# yarn.lock
+
+# Browser cache and local storage
+*.sqlite
+*.db

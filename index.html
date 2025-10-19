@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List - Personal Task Manager</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div id="app" class="app-container">
+        <header class="app-header">
+            <h1 class="app-title">Todo List</h1>
+            <div id="progress-info" class="progress-info" aria-live="polite">
+                <!-- Progress stats will be inserted here -->
+            </div>
+        </header>
+
+        <main class="app-main">
+            <section class="task-form-section" aria-labelledby="form-heading">
+                <h2 id="form-heading" class="sr-only">Add New Task</h2>
+                <form id="task-form" class="task-form" novalidate>
+                    <div class="form-group">
+                        <label for="task-input" class="sr-only">Task description</label>
+                        <input
+                            type="text"
+                            id="task-input"
+                            class="task-input"
+                            placeholder="Add a new task..."
+                            autocomplete="off"
+                            aria-required="true"
+                            aria-describedby="input-help"
+                            maxlength="255"
+                        >
+                        <span id="input-help" class="sr-only">
+                            Enter task description and press Enter or click Add Task
+                        </span>
+                    </div>
+                    <button type="submit" class="btn-add-task" aria-label="Add new task">
+                        <span class="btn-text">Add Task</span>
+                        <span class="btn-icon" aria-hidden="true">+</span>
+                    </button>
+                </form>
+            </section>
+
+            <section class="progress-section" aria-labelledby="progress-heading">
+                <h2 id="progress-heading" class="sr-only">Task Progress</h2>
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-bar" role="progressbar"
+                         aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <div class="progress-stats">
+                        <span id="completed-count" class="stat-count">0</span>
+                        <span class="stat-separator">/</span>
+                        <span id="total-count" class="stat-count">0</span>
+                        <span class="stat-label">completed</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="task-list-section" aria-labelledby="tasks-heading">
+                <h2 id="tasks-heading" class="sr-only">Your Tasks</h2>
+                <div class="task-list-container">
+                    <ul id="task-list" class="task-list" role="list">
+                        <!-- Tasks will be dynamically inserted here -->
+                    </ul>
+
+                    <div id="empty-state" class="empty-state">
+                        <div class="empty-icon" aria-hidden="true">📝</div>
+                        <p class="empty-message">No tasks yet</p>
+                        <p class="empty-submessage">Add your first task above to get started!</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p class="footer-text">
+                Built with <span class="heart" aria-hidden="true">❤️</span>
+                <span class="sr-only">love</span> |
+                <span class="task-count" aria-live="polite">0 tasks</span>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Load JavaScript at end for better performance -->
+    <script src="assets/js/app.js" defer></script>
+</body>
+</html>
